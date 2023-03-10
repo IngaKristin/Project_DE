@@ -1,0 +1,3 @@
+extraEnvVars:
+  - name: ALLOW_EMPTY_PASSWORD
+    value: "yes"

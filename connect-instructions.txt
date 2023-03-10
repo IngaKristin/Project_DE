@@ -1,0 +1,16 @@
+The MongoDB&reg; Sharded cluster can be accessed via the Mongos instances in port 27017 on the following DNS name from within your cluster:
+
+    gp9-sharded-mongodb-sharded.default.svc.cluster.local
+
+To get the root password run:
+
+    export MONGODB_ROOT_PASSWORD=$(kubectl get secret --namespace default gp9-sharded-mongodb-sharded -o jsonpath="{.data.mongodb-root-password}" | base64 -d)
+
+To connect to your database run the following command:
+
+    kubectl run --namespace default gp9-sharded-mongodb-sharded-client --rm --tty -i --restart='Never' --image docker.io/bitnami/mongodb-sharded:5.0.10-debian-11-r2 --command -- mongosh admin --host gp9-sharded-mongodb-sharded --authenticationDatabase admin -u root -p $MONGODB_ROOT_PASSWORD
+
+To connect to your database from outside the cluster execute the following commands:
+
+    kubectl port-forward --namespace default svc/gp9-sharded-mongodb-sharded 27017:27017 &
+    mongosh --host 127.0.0.1 --authenticationDatabase admin -p $MONGODB_ROOT_PASSWORD
