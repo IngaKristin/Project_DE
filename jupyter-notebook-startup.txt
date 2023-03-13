@@ -1,0 +1,7 @@
+SSH with port forwarding into the master node
+ ssh -A ubuntu@130.238.28.160 -L 8001:127.0.0.1:8001 -L 8888:127.0.0.1:8888 
+ 
+Run 
+  kubectl port-forward -n spark service/jupyter 8888:8888
+  
+Open browser and access http://localhost:8888 to access the jupyter notebook and start analysing 😃
