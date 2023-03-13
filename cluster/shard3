@@ -1,0 +1,171 @@
+[38;5;6m [38;5;5m17:19:41.42 [0m[38;5;2mINFO [0m ==> Setting node as primary
+[38;5;6mmongodb [38;5;5m17:19:41.46 [0m
+[38;5;6mmongodb [38;5;5m17:19:41.46 [0m[1mWelcome to the Bitnami mongodb-sharded container[0m
+[38;5;6mmongodb [38;5;5m17:19:41.47 [0mSubscribe to project updates by watching [1mhttps://github.com/bitnami/containers[0m
+[38;5;6mmongodb [38;5;5m17:19:41.47 [0mSubmit issues and feature requests at [1mhttps://github.com/bitnami/containers/issues[0m
+[38;5;6mmongodb [38;5;5m17:19:41.47 [0m
+[38;5;6mmongodb [38;5;5m17:19:41.48 [0m[38;5;2mINFO [0m ==> ** Starting MongoDB Sharded setup **
+[38;5;6mmongodb [38;5;5m17:19:41.51 [0m[38;5;2mINFO [0m ==> Validating settings in MONGODB_* env vars...
+[38;5;6mmongodb [38;5;5m17:19:45.03 [0m[38;5;2mINFO [0m ==> Initializing MongoDB Sharded...
+[38;5;6mmongodb [38;5;5m17:19:45.08 [0m[38;5;2mINFO [0m ==> Deploying MongoDB Sharded from scratch...
+MongoNetworkError: connect ECONNREFUSED 10.100.102.111:27017
+[38;5;6mmongodb [38;5;5m17:19:49.70 [0m[38;5;2mINFO [0m ==> Creating users...
+[38;5;6mmongodb [38;5;5m17:19:49.70 [0m[38;5;2mINFO [0m ==> Creating root user...
+Current Mongosh Log ID:	640e09b695dab812e2549e11
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.7.1
+Using MongoDB:		6.0.4
+Using Mongosh:		1.7.1
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2023-03-12T17:19:45.802+00:00: vm.max_map_count is too low
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+   
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+   
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+gp9-sharded-mongodb-sharded-shard-3 [direct: primary] test> {
+  ok: 1,
+  '$clusterTime': {
+    clusterTime: Timestamp({ t: 1678641590, i: 4 }),
+    signature: {
+      hash: Binary(Buffer.from("0000000000000000000000000000000000000000", "hex"), 0),
+      keyId: Long("0")
+    }
+  },
+  operationTime: Timestamp({ t: 1678641590, i: 4 })
+}
+gp9-sharded-mongodb-sharded-shard-3 [direct: primary] test> [38;5;6mmongodb [38;5;5m17:19:51.46 [0m[38;5;2mINFO [0m ==> Users created
+[38;5;6mmongodb [38;5;5m17:19:51.46 [0m[38;5;2mINFO [0m ==> Writing keyfile for replica set authentication...
+[38;5;6mmongodb [38;5;5m17:19:51.56 [0m[38;5;2mINFO [0m ==> Enabling authentication...
+[38;5;6mmongodb [38;5;5m17:19:51.57 [0m[38;5;2mINFO [0m ==> Configuring MongoDB Sharded replica set...
+[38;5;6mmongodb [38;5;5m17:19:51.58 [0m[38;5;2mINFO [0m ==> Stopping MongoDB...
+[38;5;6mmongodb [38;5;5m17:19:56.19 [0m[38;5;2mINFO [0m ==> Configuring MongoDB primary node...: gp9-sharded-mongodb-sharded-shard3-data-0.gp9-sharded-mongodb-sharded-headless.default.svc.cluster.local
+[38;5;6mmongodb [38;5;5m17:19:57.86 [0m[38;5;2mINFO [0m ==> Stopping MongoDB...
+[38;5;6mmongodb [38;5;5m17:19:59.89 [0m[38;5;2mINFO [0m ==> Trying to connect to MongoDB server gp9-sharded-mongodb-sharded...
+[38;5;6mmongodb [38;5;5m17:19:59.91 [0m[38;5;2mINFO [0m ==> Found MongoDB server listening at gp9-sharded-mongodb-sharded:27017 !
+[38;5;6mmongodb [38;5;5m17:20:01.61 [0m[38;5;2mINFO [0m ==> MongoDB server listening and working at gp9-sharded-mongodb-sharded:27017 !
+[38;5;6mmongodb [38;5;5m17:20:03.25 [0m[38;5;2mINFO [0m ==> Shard already in cluster
+[38;5;6mmongodb [38;5;5m17:20:03.27 [0m[38;5;2mINFO [0m ==> ** MongoDB Sharded setup finished! **
+
+[38;5;6mmongodb [38;5;5m17:20:03.30 [0m[38;5;2mINFO [0m ==> ** Starting MongoDB **
+{"t":{"$date":"2023-03-12T17:20:03.344Z"},"s":"I",  "c":"CONTROL",  "id":5760901, "ctx":"-","msg":"Applied --setParameter options","attr":{"serverParameters":{"enableLocalhostAuthBypass":{"default":true,"value":false}}}}
+
+{"t":{"$date":"2023-03-12T17:20:03.344+00:00"},"s":"I",  "c":"CONTROL",  "id":20698,   "ctx":"-","msg":"***** SERVER RESTARTED *****"}
+{"t":{"$date":"2023-03-12T17:20:03.344+00:00"},"s":"I",  "c":"CONTROL",  "id":23285,   "ctx":"-","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2023-03-12T17:20:03.346+00:00"},"s":"I",  "c":"NETWORK",  "id":4915701, "ctx":"-","msg":"Initialized wire specification","attr":{"spec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true}}}
+{"t":{"$date":"2023-03-12T17:20:03.346+00:00"},"s":"I",  "c":"NETWORK",  "id":4648601, "ctx":"main","msg":"Implicit TCP FastOpen unavailable. If TCP FastOpen is required, set tcpFastOpenServer, tcpFastOpenClient, and tcpFastOpenQueueSize."}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"RenameCollectionParticipantService","namespace":"config.localRenameParticipants"}}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ShardingDDLCoordinator","namespace":"config.system.sharding_ddl_coordinators"}}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ReshardingDonorService","namespace":"config.localReshardingOperations.donor"}}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"ReshardingRecipientService","namespace":"config.localReshardingOperations.recipient"}}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationDonorService","namespace":"config.tenantMigrationDonors"}}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"REPL",     "id":5123008, "ctx":"main","msg":"Successfully registered PrimaryOnlyService","attr":{"service":"TenantMigrationRecipientService","namespace":"config.tenantMigrationRecipients"}}
+{"t":{"$date":"2023-03-12T17:20:03.371+00:00"},"s":"I",  "c":"CONTROL",  "id":5945603, "ctx":"main","msg":"Multi threading initialized"}
+{"t":{"$date":"2023-03-12T17:20:03.372+00:00"},"s":"I",  "c":"CONTROL",  "id":4615611, "ctx":"initandlisten","msg":"MongoDB starting","attr":{"pid":1,"port":27017,"dbPath":"/bitnami/mongodb/data/db","architecture":"64-bit","host":"gp9-sharded-mongodb-sharded-shard3-data-0"}}
+{"t":{"$date":"2023-03-12T17:20:03.372+00:00"},"s":"I",  "c":"CONTROL",  "id":23403,   "ctx":"initandlisten","msg":"Build Info","attr":{"buildInfo":{"version":"6.0.4","gitVersion":"44ff59461c1353638a71e710f385a566bcd2f547","openSSLVersion":"OpenSSL 1.1.1n  15 Mar 2022","modules":[],"allocator":"tcmalloc","environment":{"distmod":"debian11","distarch":"x86_64","target_arch":"x86_64"}}}}
+{"t":{"$date":"2023-03-12T17:20:03.372+00:00"},"s":"I",  "c":"CONTROL",  "id":51765,   "ctx":"initandlisten","msg":"Operating System","attr":{"os":{"name":"PRETTY_NAME=\"Debian GNU/Linux 11 (bullseye)\"","version":"Kernel 5.15.0-57-generic"}}}
+{"t":{"$date":"2023-03-12T17:20:03.372+00:00"},"s":"I",  "c":"CONTROL",  "id":21951,   "ctx":"initandlisten","msg":"Options set by command line","attr":{"options":{"config":"/opt/bitnami/mongodb/conf/mongodb.conf","net":{"bindIp":"*","ipv6":false,"port":27017,"unixDomainSocket":{"enabled":true,"pathPrefix":"/opt/bitnami/mongodb/tmp"}},"processManagement":{"fork":false,"pidFilePath":"/opt/bitnami/mongodb/tmp/mongodb.pid"},"replication":{"enableMajorityReadConcern":true,"replSetName":"gp9-sharded-mongodb-sharded-shard-3"},"security":{"authorization":"enabled","keyFile":"/opt/bitnami/mongodb/conf/keyfile"},"setParameter":{"enableLocalhostAuthBypass":"false"},"sharding":{"clusterRole":"shardsvr"},"storage":{"dbPath":"/bitnami/mongodb/data/db","directoryPerDB":false,"journal":{"enabled":true}},"systemLog":{"destination":"file","logAppend":true,"logRotate":"reopen","path":"/opt/bitnami/mongodb/logs/mongodb.log","quiet":false,"verbosity":0}}}}
+{"t":{"$date":"2023-03-12T17:20:03.372+00:00"},"s":"I",  "c":"STORAGE",  "id":22270,   "ctx":"initandlisten","msg":"Storage engine to use detected by data files","attr":{"dbpath":"/bitnami/mongodb/data/db","storageEngine":"wiredTiger"}}
+{"t":{"$date":"2023-03-12T17:20:03.373+00:00"},"s":"I",  "c":"STORAGE",  "id":22315,   "ctx":"initandlisten","msg":"Opening WiredTiger","attr":{"config":"create,cache_size=1449M,session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,remove=true,path=journal,compressor=snappy),builtin_extension_config=(zstd=(compression_level=6)),file_manager=(close_idle_time=600,close_scan_interval=10,close_handle_minimum=2000),statistics_log=(wait=0),json_output=(error,message),verbose=[recovery_progress:1,checkpoint_progress:1,compact_progress:1,backup:0,checkpoint:0,compact:0,evict:0,history_store:0,recovery:0,rts:0,salvage:0,tiered:0,timestamp:0,transaction:0,verify:0,log:0],"}}
+{"t":{"$date":"2023-03-12T17:20:04.208+00:00"},"s":"I",  "c":"STORAGE",  "id":4795906, "ctx":"initandlisten","msg":"WiredTiger opened","attr":{"durationMillis":835}}
+{"t":{"$date":"2023-03-12T17:20:04.208+00:00"},"s":"I",  "c":"RECOVERY", "id":23987,   "ctx":"initandlisten","msg":"WiredTiger recoveryTimestamp","attr":{"recoveryTimestamp":{"$timestamp":{"t":1678641597,"i":1}}}}
+{"t":{"$date":"2023-03-12T17:20:04.208+00:00"},"s":"I",  "c":"RECOVERY", "id":5380106, "ctx":"initandlisten","msg":"WiredTiger oldestTimestamp","attr":{"oldestTimestamp":{"$timestamp":{"t":1678641587,"i":1}}}}
+{"t":{"$date":"2023-03-12T17:20:04.212+00:00"},"s":"I",  "c":"STORAGE",  "id":22383,   "ctx":"initandlisten","msg":"The size storer reports that the oplog contains","attr":{"numRecords":19,"dataSize":4127}}
+{"t":{"$date":"2023-03-12T17:20:04.212+00:00"},"s":"I",  "c":"STORAGE",  "id":22384,   "ctx":"initandlisten","msg":"Scanning the oplog to determine where to place markers for truncation"}
+{"t":{"$date":"2023-03-12T17:20:04.213+00:00"},"s":"I",  "c":"STORAGE",  "id":22382,   "ctx":"initandlisten","msg":"WiredTiger record store oplog processing finished","attr":{"durationMillis":0}}
+{"t":{"$date":"2023-03-12T17:20:04.216+00:00"},"s":"W",  "c":"CONTROL",  "id":5123300, "ctx":"initandlisten","msg":"vm.max_map_count is too low","attr":{"currentValue":65530,"recommendedMinimum":1677720,"maxConns":838860},"tags":["startupWarnings"]}
+{"t":{"$date":"2023-03-12T17:20:04.219+00:00"},"s":"I",  "c":"NETWORK",  "id":4915702, "ctx":"initandlisten","msg":"Updated wire specification","attr":{"oldSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":0,"maxWireVersion":17},"outgoing":{"minWireVersion":6,"maxWireVersion":17},"isInternalClient":true},"newSpec":{"incomingExternalClient":{"minWireVersion":0,"maxWireVersion":17},"incomingInternalClient":{"minWireVersion":13,"maxWireVersion":17},"outgoing":{"minWireVersion":13,"maxWireVersion":17},"isInternalClient":true}}}
+{"t":{"$date":"2023-03-12T17:20:04.219+00:00"},"s":"I",  "c":"REPL",     "id":5853300, "ctx":"initandlisten","msg":"current featureCompatibilityVersion value","attr":{"featureCompatibilityVersion":"5.0","context":"startup"}}
+{"t":{"$date":"2023-03-12T17:20:04.219+00:00"},"s":"I",  "c":"STORAGE",  "id":5071100, "ctx":"initandlisten","msg":"Clearing temp directory"}
+{"t":{"$date":"2023-03-12T17:20:04.227+00:00"},"s":"I",  "c":"CONTROL",  "id":20536,   "ctx":"initandlisten","msg":"Flow Control is enabled on this deployment"}
+{"t":{"$date":"2023-03-12T17:20:04.227+00:00"},"s":"I",  "c":"STORAGE",  "id":5380103, "ctx":"initandlisten","msg":"Unpin oldest timestamp request","attr":{"service":"_wt_startup","requestedTs":{"$timestamp":{"t":1678641587,"i":1}}}}
+{"t":{"$date":"2023-03-12T17:20:04.227+00:00"},"s":"I",  "c":"FTDC",     "id":20625,   "ctx":"initandlisten","msg":"Initializing full-time diagnostic data capture","attr":{"dataDirectory":"/bitnami/mongodb/data/db/diagnostic.data"}}
+{"t":{"$date":"2023-03-12T17:20:04.229+00:00"},"s":"W",  "c":"SHARDING", "id":22074,   "ctx":"initandlisten","msg":"Started with --shardsvr, but no shardIdentity document was found on disk. This most likely means this server has not yet been added to a sharded cluster","attr":{"namespace":"admin.system.version"}}
+{"t":{"$date":"2023-03-12T17:20:04.230+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"initandlisten","msg":"Setting new configuration state","attr":{"newState":"ConfigStartingUp","oldState":"ConfigPreStart"}}
+{"t":{"$date":"2023-03-12T17:20:04.231+00:00"},"s":"I",  "c":"REPL",     "id":6005300, "ctx":"initandlisten","msg":"Starting up replica set aware services"}
+{"t":{"$date":"2023-03-12T17:20:04.232+00:00"},"s":"I",  "c":"REPL",     "id":4280500, "ctx":"initandlisten","msg":"Attempting to create internal replication collections"}
+{"t":{"$date":"2023-03-12T17:20:04.233+00:00"},"s":"I",  "c":"REPL",     "id":4280501, "ctx":"initandlisten","msg":"Attempting to load local voted for document"}
+{"t":{"$date":"2023-03-12T17:20:04.233+00:00"},"s":"I",  "c":"REPL",     "id":4280502, "ctx":"initandlisten","msg":"Searching for local Rollback ID document"}
+{"t":{"$date":"2023-03-12T17:20:04.235+00:00"},"s":"I",  "c":"REPL",     "id":21529,   "ctx":"initandlisten","msg":"Initializing rollback ID","attr":{"rbid":1}}
+{"t":{"$date":"2023-03-12T17:20:04.235+00:00"},"s":"I",  "c":"REPL",     "id":4280504, "ctx":"initandlisten","msg":"Cleaning up any partially applied oplog batches & reading last op from oplog"}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"W",  "c":"SHARDING", "id":22074,   "ctx":"initandlisten","msg":"Started with --shardsvr, but no shardIdentity document was found on disk. This most likely means this server has not yet been added to a sharded cluster","attr":{"namespace":"admin.system.version"}}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"I",  "c":"CONTROL",  "id":6608200, "ctx":"initandlisten","msg":"Initializing cluster server parameters from disk"}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"I",  "c":"REPL",     "id":21544,   "ctx":"initandlisten","msg":"Recovering from stable timestamp","attr":{"stableTimestamp":{"$timestamp":{"t":1678641597,"i":1}},"topOfOplog":{"ts":{"$timestamp":{"t":1678641597,"i":1}},"t":2},"appliedThrough":{"ts":{"$timestamp":{"t":0,"i":0}},"t":-1}}}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"I",  "c":"REPL",     "id":21545,   "ctx":"initandlisten","msg":"Starting recovery oplog application at the stable timestamp","attr":{"stableTimestamp":{"$timestamp":{"t":1678641597,"i":1}}}}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"I",  "c":"REPL",     "id":5466604, "ctx":"initandlisten","msg":"Start point for recovery oplog application exists in oplog. No adjustment necessary","attr":{"startPoint":{"$timestamp":{"t":1678641597,"i":1}}}}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"I",  "c":"REPL",     "id":21549,   "ctx":"initandlisten","msg":"No oplog entries to apply for recovery. Start point is at the top of the oplog"}
+{"t":{"$date":"2023-03-12T17:20:04.236+00:00"},"s":"I",  "c":"REPL",     "id":4280505, "ctx":"initandlisten","msg":"Creating any necessary TenantMigrationAccessBlockers for unfinished migrations"}
+{"t":{"$date":"2023-03-12T17:20:04.238+00:00"},"s":"I",  "c":"REPL",     "id":4280506, "ctx":"initandlisten","msg":"Reconstructing prepared transactions"}
+{"t":{"$date":"2023-03-12T17:20:04.239+00:00"},"s":"I",  "c":"REPL",     "id":4280507, "ctx":"initandlisten","msg":"Loaded replica set config, scheduled callback to set local config"}
+{"t":{"$date":"2023-03-12T17:20:04.239+00:00"},"s":"I",  "c":"REPL",     "id":4280508, "ctx":"ReplCoord-0","msg":"Attempting to set local replica set config; validating config for startup"}
+{"t":{"$date":"2023-03-12T17:20:04.239+00:00"},"s":"I",  "c":"STORAGE",  "id":22262,   "ctx":"initandlisten","msg":"Timestamp monitor starting"}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":4280509, "ctx":"ReplCoord-0","msg":"Local configuration validated for startup"}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"ReplCoord-0","msg":"Setting new configuration state","attr":{"newState":"ConfigSteady","oldState":"ConfigStartingUp"}}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":21392,   "ctx":"ReplCoord-0","msg":"New replica set config in use","attr":{"config":{"_id":"gp9-sharded-mongodb-sharded-shard-3","version":2,"term":2,"members":[{"_id":0,"host":"gp9-sharded-mongodb-sharded-shard3-data-0.gp9-sharded-mongodb-sharded-headless.default.svc.cluster.local:27017","arbiterOnly":false,"buildIndexes":true,"hidden":false,"priority":5,"tags":{},"secondaryDelaySecs":0,"votes":1}],"protocolVersion":1,"writeConcernMajorityJournalDefault":true,"settings":{"chainingAllowed":true,"heartbeatIntervalMillis":2000,"heartbeatTimeoutSecs":10,"electionTimeoutMillis":10000,"catchUpTimeoutMillis":-1,"catchUpTakeoverDelayMillis":30000,"getLastErrorModes":{},"getLastErrorDefaults":{"w":1,"wtimeout":0},"replicaSetId":{"$oid":"640e09b373b8160478469620"}}}}}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":21393,   "ctx":"ReplCoord-0","msg":"Found self in config","attr":{"hostAndPort":"gp9-sharded-mongodb-sharded-shard3-data-0.gp9-sharded-mongodb-sharded-headless.default.svc.cluster.local:27017"}}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":21358,   "ctx":"ReplCoord-0","msg":"Replica set state transition","attr":{"newState":"STARTUP2","oldState":"STARTUP"}}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":21320,   "ctx":"ReplCoord-0","msg":"Updated term","attr":{"term":2}}
+{"t":{"$date":"2023-03-12T17:20:04.240+00:00"},"s":"I",  "c":"REPL",     "id":21306,   "ctx":"ReplCoord-0","msg":"Starting replication storage threads"}
+{"t":{"$date":"2023-03-12T17:20:04.241+00:00"},"s":"I",  "c":"CONTROL",  "id":20714,   "ctx":"LogicalSessionCacheRefresh","msg":"Failed to refresh session cache, will try again at the next refresh interval","attr":{"error":"ShardingStateNotInitialized: sharding state is not yet initialized"}}
+{"t":{"$date":"2023-03-12T17:20:04.241+00:00"},"s":"I",  "c":"CONTROL",  "id":20712,   "ctx":"LogicalSessionCacheReap","msg":"Sessions collection is not set up; waiting until next sessions reap interval","attr":{"error":"ShardingStateNotInitialized: sharding state is not yet initialized"}}
+{"t":{"$date":"2023-03-12T17:20:04.241+00:00"},"s":"I",  "c":"REPL",     "id":40440,   "ctx":"initandlisten","msg":"Starting the TopologyVersionObserver"}
+{"t":{"$date":"2023-03-12T17:20:04.241+00:00"},"s":"I",  "c":"REPL",     "id":40445,   "ctx":"TopologyVersionObserver","msg":"Started TopologyVersionObserver"}
+{"t":{"$date":"2023-03-12T17:20:04.241+00:00"},"s":"I",  "c":"REPL",     "id":4280512, "ctx":"ReplCoord-0","msg":"No initial sync required. Attempting to begin steady replication"}
+{"t":{"$date":"2023-03-12T17:20:04.241+00:00"},"s":"I",  "c":"REPL",     "id":21358,   "ctx":"ReplCoord-0","msg":"Replica set state transition","attr":{"newState":"RECOVERING","oldState":"STARTUP2"}}
+{"t":{"$date":"2023-03-12T17:20:04.242+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"/opt/bitnami/mongodb/tmp/mongodb-27017.sock"}}
+{"t":{"$date":"2023-03-12T17:20:04.242+00:00"},"s":"I",  "c":"NETWORK",  "id":23015,   "ctx":"listener","msg":"Listening on","attr":{"address":"0.0.0.0"}}
+{"t":{"$date":"2023-03-12T17:20:04.242+00:00"},"s":"I",  "c":"NETWORK",  "id":23016,   "ctx":"listener","msg":"Waiting for connections","attr":{"port":27017,"ssl":"off"}}
+{"t":{"$date":"2023-03-12T17:20:04.243+00:00"},"s":"I",  "c":"REPL",     "id":21299,   "ctx":"ReplCoord-0","msg":"Starting replication fetcher thread"}
+{"t":{"$date":"2023-03-12T17:20:04.243+00:00"},"s":"I",  "c":"REPL",     "id":21300,   "ctx":"ReplCoord-0","msg":"Starting replication applier thread"}
+{"t":{"$date":"2023-03-12T17:20:04.243+00:00"},"s":"I",  "c":"REPL",     "id":21301,   "ctx":"ReplCoord-0","msg":"Starting replication reporter thread"}
+{"t":{"$date":"2023-03-12T17:20:04.244+00:00"},"s":"I",  "c":"REPL",     "id":21224,   "ctx":"OplogApplier-0","msg":"Starting oplog application"}
+{"t":{"$date":"2023-03-12T17:20:04.244+00:00"},"s":"I",  "c":"REPL",     "id":4280511, "ctx":"ReplCoord-0","msg":"Set local replica set config"}
+{"t":{"$date":"2023-03-12T17:20:04.244+00:00"},"s":"I",  "c":"REPL",     "id":21358,   "ctx":"OplogApplier-0","msg":"Replica set state transition","attr":{"newState":"SECONDARY","oldState":"RECOVERING"}}
+{"t":{"$date":"2023-03-12T17:20:04.244+00:00"},"s":"I",  "c":"ELECTION", "id":4615652, "ctx":"OplogApplier-0","msg":"Starting an election, since we've seen no PRIMARY in election timeout period","attr":{"electionTimeoutPeriodMillis":10000}}
+{"t":{"$date":"2023-03-12T17:20:04.244+00:00"},"s":"I",  "c":"ELECTION", "id":21438,   "ctx":"OplogApplier-0","msg":"Conducting a dry run election to see if we could be elected","attr":{"currentTerm":2}}
+{"t":{"$date":"2023-03-12T17:20:04.244+00:00"},"s":"I",  "c":"ELECTION", "id":21444,   "ctx":"ReplCoord-0","msg":"Dry election run succeeded, running for election","attr":{"newTerm":3}}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"ELECTION", "id":6015300, "ctx":"ReplCoord-0","msg":"Storing last vote document in local storage for my election","attr":{"lastVote":{"term":3,"candidateIndex":0}}}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"ELECTION", "id":21450,   "ctx":"ReplCoord-0","msg":"Election succeeded, assuming primary role","attr":{"term":3}}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21358,   "ctx":"ReplCoord-0","msg":"Replica set state transition","attr":{"newState":"PRIMARY","oldState":"SECONDARY"}}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21106,   "ctx":"ReplCoord-0","msg":"Resetting sync source to empty","attr":{"previousSyncSource":":27017"}}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21359,   "ctx":"ReplCoord-0","msg":"Entering primary catch-up mode"}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":6015304, "ctx":"ReplCoord-0","msg":"Skipping primary catchup since we are the only node in the replica set."}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21363,   "ctx":"ReplCoord-0","msg":"Exited primary catch-up mode"}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21107,   "ctx":"ReplCoord-0","msg":"Stopping replication producer"}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21239,   "ctx":"ReplBatcher","msg":"Oplog buffer has been drained","attr":{"term":3}}
+{"t":{"$date":"2023-03-12T17:20:04.245+00:00"},"s":"I",  "c":"REPL",     "id":21239,   "ctx":"ReplBatcher","msg":"Oplog buffer has been drained","attr":{"term":3}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":21343,   "ctx":"RstlKillOpThread","msg":"Starting to kill user operations"}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":21344,   "ctx":"RstlKillOpThread","msg":"Stopped killing user operations"}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":21340,   "ctx":"RstlKillOpThread","msg":"State transition ops metrics","attr":{"metrics":{"lastStateTransition":"stepUp","userOpsKilled":0,"userOpsRunning":0}}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":4508103, "ctx":"OplogApplier-0","msg":"Increment the config term via reconfig"}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":6015313, "ctx":"OplogApplier-0","msg":"Replication config state is Steady, starting reconfig"}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"OplogApplier-0","msg":"Setting new configuration state","attr":{"newState":"ConfigReconfiguring","oldState":"ConfigSteady"}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":21353,   "ctx":"OplogApplier-0","msg":"replSetReconfig config object parses ok","attr":{"numMembers":1}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":51814,   "ctx":"OplogApplier-0","msg":"Persisting new config to disk"}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":6015315, "ctx":"OplogApplier-0","msg":"Persisted new config to disk"}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":6015317, "ctx":"OplogApplier-0","msg":"Setting new configuration state","attr":{"newState":"ConfigSteady","oldState":"ConfigReconfiguring"}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":21392,   "ctx":"OplogApplier-0","msg":"New replica set config in use","attr":{"config":{"_id":"gp9-sharded-mongodb-sharded-shard-3","version":2,"term":3,"members":[{"_id":0,"host":"gp9-sharded-mongodb-sharded-shard3-data-0.gp9-sharded-mongodb-sharded-headless.default.svc.cluster.local:27017","arbiterOnly":false,"buildIndexes":true,"hidden":false,"priority":5,"tags":{},"secondaryDelaySecs":0,"votes":1}],"protocolVersion":1,"writeConcernMajorityJournalDefault":true,"settings":{"chainingAllowed":true,"heartbeatIntervalMillis":2000,"heartbeatTimeoutSecs":10,"electionTimeoutMillis":10000,"catchUpTimeoutMillis":-1,"catchUpTakeoverDelayMillis":30000,"getLastErrorModes":{},"getLastErrorDefaults":{"w":1,"wtimeout":0},"replicaSetId":{"$oid":"640e09b373b8160478469620"}}}}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":21393,   "ctx":"OplogApplier-0","msg":"Found self in config","attr":{"hostAndPort":"gp9-sharded-mongodb-sharded-shard3-data-0.gp9-sharded-mongodb-sharded-headless.default.svc.cluster.local:27017"}}
+{"t":{"$date":"2023-03-12T17:20:04.246+00:00"},"s":"I",  "c":"REPL",     "id":6015310, "ctx":"OplogApplier-0","msg":"Starting to transition to primary."}
+{"t":{"$date":"2023-03-12T17:20:04.247+00:00"},"s":"I",  "c":"REPL",     "id":6015309, "ctx":"OplogApplier-0","msg":"Logging transition to primary to oplog on stepup"}
+{"t":{"$date":"2023-03-12T17:20:04.247+00:00"},"s":"I",  "c":"STORAGE",  "id":20657,   "ctx":"OplogApplier-0","msg":"IndexBuildsCoordinator::onStepUp - this node is stepping up to primary"}
+{"t":{"$date":"2023-03-12T17:20:04.248+00:00"},"s":"I",  "c":"REPL",     "id":21331,   "ctx":"OplogApplier-0","msg":"Transition to primary complete; database writes are now permitted"}
+{"t":{"$date":"2023-03-12T17:20:04.248+00:00"},"s":"I",  "c":"REPL",     "id":6015306, "ctx":"OplogApplier-0","msg":"Applier already left draining state, exiting."}
+{"t":{"$date":"2023-03-12T17:20:04.250+00:00"},"s":"I",  "c":"REPL",     "id":5123005, "ctx":"ShardingDDLCoordinator-0","msg":"Rebuilding PrimaryOnlyService due to stepUp","attr":{"service":"ShardingDDLCoordinator"}}
+{"t":{"$date":"2023-03-12T17:20:04.250+00:00"},"s":"I",  "c":"REPL",     "id":5123005, "ctx":"TenantMigrationRecipientService-0","msg":"Rebuilding PrimaryOnlyService due to stepUp","attr":{"service":"TenantMigrationRecipientService"}}
+{"t":{"$date":"2023-03-12T17:20:04.250+00:00"},"s":"I",  "c":"REPL",     "id":5123005, "ctx":"ReshardingDonorService-0","msg":"Rebuilding PrimaryOnlyService due to stepUp","attr":{"service":"ReshardingDonorService"}}
+{"t":{"$date":"2023-03-12T17:20:04.251+00:00"},"s":"I",  "c":"REPL",     "id":5123005, "ctx":"RenameCollectionParticipantService-0","msg":"Rebuilding PrimaryOnlyService due to stepUp","attr":{"service":"RenameCollectionParticipantService"}}
+{"t":{"$date":"2023-03-12T17:20:04.251+00:00"},"s":"I",  "c":"REPL",     "id":5123005, "ctx":"ReshardingRecipientService-0","msg":"Rebuilding PrimaryOnlyService due to stepUp","attr":{"service":"ReshardingRecipientService"}}
+{"t":{"$date":"2023-03-12T17:20:04.251+00:00"},"s":"I",  "c":"REPL",     "id":5123005, "ctx":"TenantMigrationDonorService-0","msg":"Rebuilding PrimaryOnlyService due to stepUp","attr":{"service":"TenantMigrationDonorService"}}
