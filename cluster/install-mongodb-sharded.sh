@@ -11,6 +11,8 @@ helm install gp9-sharded bitnami/mongodb-sharded --debug --kube-insecure-skip-tl
     --set volumePermissions.enabled=true \
     --set shardsvr.persistence.mountPath="/home/ubuntu/" \
     --set configsvr.persistence.mountPath="/home/ubuntu/" \
+    --set mongos.replicaCount=2 \
+    --set mongos.persistence.mountPath="/home/ubuntu/" \
     --set common.persistence.mountPath="/home/ubuntu/" \
     --set global.persistence.mountPath="/home/ubuntu/" \
     --set global.mountPath="/home/ubuntu/" \
