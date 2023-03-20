@@ -1,2 +1,2 @@
-helm repo add my-repo https://charts.bitnami.com/bitnami
-helm install my-release my-repo/mongodb-sharded
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install gp9-sharded bitnami/mongodb-sharded
