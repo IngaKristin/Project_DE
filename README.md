@@ -1,2 +1,2 @@
-# Project_DE
-Repository for the Data Engineering Project
+# Project in Data Engineering - Trend Analysis of Reddit Comments
+
